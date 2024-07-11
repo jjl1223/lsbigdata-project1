@@ -1,0 +1,97 @@
+---
+title: "마크다운"
+author: "이재준"
+format: html
+jupyter: python3
+---
+
+#파이썬 코드 청크
+* 단축키: ctrl + Alt + I
+
+### 코드 청크 종류
+
+2가지 종류가 있음
+1. 인라인 코드청크 : 백틱 하나로 묶음
+
+2. 디스플레이 코드청크 : 백틱(```)3개로 묶음
+
+### 실행가능한 코드청크
+백틱 뒤에 `{python}`붙여주면 됨
+```{python}
+1%1
+```
+
+##'코드 청크 실행 옵션
+
+옵션은 `#|` 시작함.
+*`echo` 옵션: 코드를 문서에 보여줌
+*`eval` 옵션: 코드를 돌릴 것인가, 그냥 둘것인가를 결정
+```{python}
+#| echo: False
+#| eval: True
+
+1%1
+```
+  이것은 간단한 각주  [^1].
+  [^1]: 나
+  
+  ##취소선 ,굵게, 이택릭
+  **굵게**
+  *기울기*
+  ~~취소~~
+  ## 체크박스
+  
+  - [x] ~~화분 물 주기~~
+  - [ ] 밀린 일기 작성
+  
+  ## 이미지 넣는법
+[슬기로운 통계생활](https://statisticsplaybook.com/)
+![위키피디아 흑요석](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/ObsidianOregon.jpg/360px-ObsidianOregon.jpg)
+![저장된 사진](C:\Users\USER\Desktop\이재준\주석 2024-07-11 114552)
+
+## 수식 입력 방버
+* 인라인 수식: $ 하나로 감싸준다. (본문에 입력)
+* 디스플레이 수식: $ 두개로 감싸준다.(독립적인 문단)
+
+문장안에 숫자 $5^2$를 넣어보자
+여러숫자들을 따로 떼어 표시하자
+
+$$
+x^2+ y^2 = 5
+$$
+
+# 마크다운 1
+## 굵게
+**랜더링 해줘~**
+__제발__
+
+### 기울림 이탤릭
+
+*이탤릭*
+_기울림_
+
+#### 취소선
+~~제발 되게해줘~~
+
+1. 순서가있는 리스트
+
+2. 순서가 없는 리스트
+
+- 되고
+- 안되고
+
+[github](naver.com) 
+
+![야구](https://search.naver.com/search.naver?ssc=tab.image.all&where=image&sm=tab_jum&query=%EC%95%BC%EA%B5%AC#imgId=image_sas%3Ablog_58387660d4451e66dff75228e9c94c8f)
+
+>Anyone can learn anything
+\-야야
+
+---
+```{python}
+1%1
+```
+각주[^1] 이다
+
+
+각주[^가나다]
