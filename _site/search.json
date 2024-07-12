@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "lstest",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n2"
+  },
+  {
+    "objectID": "test1.html",
+    "href": "test1.html",
+    "title": "LS빅데이터 스쿨 3일차",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "test1.html#quarto",
+    "href": "test1.html#quarto",
+    "title": "LS빅데이터 스쿨 3일차",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "test1.html#running-code",
+    "href": "test1.html#running-code",
+    "title": "LS빅데이터 스쿨 3일차",
+    "section": "Running Code",
+    "text": "Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n1 + 1\n\n2\n\n\nYou can add options to executable code like this\n\n\n4\n\n\nThe echo: false option disables the printing of code (only output is displayed)."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n2"
+  },
+  {
+    "objectID": "markdown.html",
+    "href": "markdown.html",
+    "title": "마크다운",
+    "section": "",
+    "text": "#파이썬 코드 청크 * 단축키: ctrl + Alt + I"
+  },
+  {
+    "objectID": "markdown.html#수식-입력-방버",
+    "href": "markdown.html#수식-입력-방버",
+    "title": "마크다운",
+    "section": "수식 입력 방버",
+    "text": "수식 입력 방버\n\n인라인 수식: $ 하나로 감싸준다. (본문에 입력)\n디스플레이 수식: $ 두개로 감싸준다.(독립적인 문단)\n\n문장안에 숫자 \\(5^2\\)를 넣어보자 여러숫자들을 따로 떼어 표시하자\n\\[\nx^2+ y^2 = 5\n\\angle 4\n\\]"
+  },
+  {
+    "objectID": "markdown.html#굵게",
+    "href": "markdown.html#굵게",
+    "title": "마크다운",
+    "section": "굵게",
+    "text": "굵게\n랜더링 해줘~ 제발\n\n기울림 이탤릭\n이탤릭 기울림\n\n취소선\n제발 되게해줘\n\n순서가있는 리스트\n순서가 없는 리스트\n\n\n되고\n안되고\n\ngithub\n\n\n\n야구\n\n\n\nAnyone can learn anything -야야\n\n\n\n1%1\n\n0\n\n\n각주[^1] 이다\n각주[^가나다]"
+  }
+]
