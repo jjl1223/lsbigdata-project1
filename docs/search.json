@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "lstest",
-    "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n2"
-  },
-  {
     "objectID": "test1.html",
     "href": "test1.html",
     "title": "LS빅데이터 스쿨 3일차",
@@ -26,6 +19,20 @@
     "title": "LS빅데이터 스쿨 3일차",
     "section": "Running Code",
     "text": "Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n1 + 1\n\n2\n\n\nYou can add options to executable code like this\n\n\n4\n\n\nThe echo: false option disables the printing of code (only output is displayed)."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "lstest",
+    "section": "",
+    "text": "안녕하세요 , 이게…나야 ```"
+  },
+  {
+    "objectID": "index.html#홈페이지-첫-화면입니다",
+    "href": "index.html#홈페이지-첫-화면입니다",
+    "title": "lstest",
+    "section": "",
+    "text": "안녕하세요 , 이게…나야 ```"
   },
   {
     "objectID": "about.html",

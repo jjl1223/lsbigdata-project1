@@ -62,7 +62,8 @@ size= b.size
 c= np.array( [ [1,2] , [3,4] ] )
 d= np.array( [ [1,2] , [3,4] ] )
 c+d
-
+f= np.array([5,34])
+e=np.array[5,34]
 e=(d ==3)
 #35672 보다 작은수 중에서 7로 나눠서 나머지가 3인 숫자들의 개수
 thi=np.arange(0,35672,1)

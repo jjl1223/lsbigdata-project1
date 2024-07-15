@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="이재준">
 
-<title>lstest - 마크다운</title>
+<title>이게….나야 - About</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -102,35 +101,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -143,7 +113,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">lstest</span>
+    <span class="navbar-title">이게….나야</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -157,7 +127,7 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link active" href="./about.html" aria-current="page"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -172,41 +142,20 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#코드-청크-종류" id="toc-코드-청크-종류" class="nav-link active" data-scroll-target="#코드-청크-종류">코드 청크 종류</a></li>
-  <li><a href="#실행가능한-코드청크" id="toc-실행가능한-코드청크" class="nav-link" data-scroll-target="#실행가능한-코드청크">실행가능한 코드청크</a></li>
-  <li><a href="#수식-입력-방버" id="toc-수식-입력-방버" class="nav-link" data-scroll-target="#수식-입력-방버">수식 입력 방버</a></li>
-  <li><a href="#마크다운-1" id="toc-마크다운-1" class="nav-link" data-scroll-target="#마크다운-1">마크다운 1</a>
-  <ul class="collapse">
-  <li><a href="#굵게" id="toc-굵게" class="nav-link" data-scroll-target="#굵게">굵게</a>
-  <ul class="collapse">
-  <li><a href="#기울림-이탤릭" id="toc-기울림-이탤릭" class="nav-link" data-scroll-target="#기울림-이탤릭">기울림 이탤릭</a></li>
-  </ul></li>
-  </ul></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">마크다운</h1>
+<h1 class="title">About</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>이재준 </p>
-          </div>
-  </div>
     
   
     
@@ -217,94 +166,15 @@ window.Quarto = {
 </header>
 
 
-<p>#파이썬 코드 청크 * 단축키: ctrl + Alt + I</p>
-<section id="코드-청크-종류" class="level3">
-<h3 class="anchored" data-anchor-id="코드-청크-종류">코드 청크 종류</h3>
-<p>2가지 종류가 있음 1. 인라인 코드청크 : 백틱 하나로 묶음</p>
-<ol start="2" type="1">
-<li>디스플레이 코드청크 : 백틱(```)3개로 묶음</li>
-</ol>
-</section>
-<section id="실행가능한-코드청크" class="level3">
-<h3 class="anchored" data-anchor-id="실행가능한-코드청크">실행가능한 코드청크</h3>
-<p>백틱 뒤에 <code>{python}</code>붙여주면 됨</p>
-<div id="7ba8e5e0" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="op">%</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>About this site</p>
+<div id="f012a5d6" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="1">
-<pre><code>0</code></pre>
+<pre><code>2</code></pre>
 </div>
 </div>
-<p>##’코드 청크 실행 옵션</p>
-<p>옵션은 <code>#|</code> 시작함. <em><code>echo</code> 옵션: 코드를 문서에 보여줌 </em><code>eval</code> 옵션: 코드를 돌릴 것인가, 그냥 둘것인가를 결정</p>
-<div id="a9a35f58" class="cell" data-execution_count="2">
-<div class="cell-output cell-output-display" data-execution_count="2">
-<pre><code>0</code></pre>
-</div>
-</div>
-<p>이것은 간단한 각주 [^1]. [^1]: 나</p>
-<p>##취소선 ,굵게, 이택릭 <strong>굵게</strong> <em>기울기</em> <del>취소</del> ## 체크박스</p>
-<ul class="task-list">
-<li><label><input type="checkbox" checked=""><del>화분 물 주기</del></label></li>
-<li><label><input type="checkbox">밀린 일기 작성</label></li>
-</ul>
-<p>## 이미지 넣는법 <a href="https://statisticsplaybook.com/">슬기로운 통계생활</a> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/ObsidianOregon.jpg/360px-ObsidianOregon.jpg" class="img-fluid" alt="위키피디아 흑요석"> <img src="C:\Users\USER\Desktop\이재준\주석%202024-07-11%20114552.png" class="img-fluid" alt="저장된 사진"></p>
-</section>
-<section id="수식-입력-방버" class="level2">
-<h2 class="anchored" data-anchor-id="수식-입력-방버">수식 입력 방버</h2>
-<ul>
-<li>인라인 수식: $ 하나로 감싸준다. (본문에 입력)</li>
-<li>디스플레이 수식: $ 두개로 감싸준다.(독립적인 문단)</li>
-</ul>
-<p>문장안에 숫자 <span class="math inline">\(5^2\)</span>를 넣어보자 여러숫자들을 따로 떼어 표시하자</p>
-<p><span class="math display">\[
-x^2+ y^2 = 5
-\angle 4
-\]</span></p>
-</section>
-<section id="마크다운-1" class="level1">
-<h1>마크다운 1</h1>
-<section id="굵게" class="level2">
-<h2 class="anchored" data-anchor-id="굵게">굵게</h2>
-<p><strong>랜더링 해줘~</strong> <strong>제발</strong></p>
-<section id="기울림-이탤릭" class="level3">
-<h3 class="anchored" data-anchor-id="기울림-이탤릭">기울림 이탤릭</h3>
-<p><em>이탤릭</em> <em>기울림</em></p>
-<section id="취소선" class="level4">
-<h4 class="anchored" data-anchor-id="취소선">취소선</h4>
-<p><del>제발 되게해줘</del></p>
-<ol type="1">
-<li><p>순서가있는 리스트</p></li>
-<li><p>순서가 없는 리스트</p></li>
-</ol>
-<ul>
-<li>되고</li>
-<li>안되고</li>
-</ul>
-<p><a href="naver.com">github</a></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://search.naver.com/search.naver?ssc=tab.image.all&amp;where=image&amp;sm=tab_jum&amp;query=%EC%95%BC%EA%B5%AC#imgId=image_sas%3Ablog_58387660d4451e66dff75228e9c94c8f" class="img-fluid figure-img"></p>
-<figcaption>야구</figcaption>
-</figure>
-</div>
-<blockquote class="blockquote">
-<p>Anyone can learn anything -야야</p>
-</blockquote>
-<hr>
-<div id="bafb74a7" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="op">%</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<pre><code>0</code></pre>
-</div>
-</div>
-<p>각주[^1] 이다</p>
-<p>각주[^가나다]</p>
 
 
-</section>
-</section>
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
