@@ -45,12 +45,12 @@ exam2["test2"]=np.where(exam2["total"]>=200,"A",
 exam2.head()
 
 exam2["test2"].isin(["A","C"])
-
+np.random.seed(2014)
 np.random.randint(1,21,10) #중복포함
 np.random.choice(np.arange(1,21),10,False) #중복이 나오지 않는다
 np.random.choice(np.arange(1,4),10,True,np.array([2/5,2/5,1/5])) #확률을 다르게
 
-
+np.random.rand(1) #0~1까지 랜덤값 숫자개수만틈
 
 
 
