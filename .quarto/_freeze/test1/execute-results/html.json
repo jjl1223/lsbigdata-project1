@@ -1,0 +1,12 @@
+{
+  "hash": "3f4e7e54f3208f04bb0130d989f8ef51",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: LS빅데이터 스쿨 3일차\nauthor: 이재준\nformat: html\n---\n\n## Quarto\n\nQuarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.\n\n## Running Code\n\nWhen you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n::: {#58f1e7a9 .cell execution_count=1}\n``` {.python .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-display execution_count=1}\n```\n2\n```\n:::\n:::\n\n\nYou can add options to executable code like this \n\n::: {#8396954a .cell execution_count=2}\n\n::: {.cell-output .cell-output-display execution_count=2}\n```\n4\n```\n:::\n:::\n\n\nThe `echo: false` option disables the printing of code (only output is displayed).\n\n",
+    "supporting": [
+      "test1_files\\figure-html"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
