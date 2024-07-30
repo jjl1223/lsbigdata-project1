@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from scipy.stats import uniform
 
 uniform.rvs(2,6,size=1)
-# loc 시작점 scale 길이
+# loc 시작점 scale 길이- 시작점에서 얼마나갔는가
 #uniform.pdf(x, loc=0, scale=1)
 #uniform.cdf(x, loc=0, scale=1)
 #uniform.ppf(x, loc=0, scale=1)

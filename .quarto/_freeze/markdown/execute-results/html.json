@@ -1,0 +1,12 @@
+{
+  "hash": "bdd46e104b8f3e07733545aa78cccbaa",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: 마크다운\nauthor: 이재준\nformat: html\n---\n\n#파이썬 코드 청크\n* 단축키: ctrl + Alt + I\n\n### 코드 청크 종류\n\n2가지 종류가 있음\n1. 인라인 코드청크 : 백틱 하나로 묶음\n\n2. 디스플레이 코드청크 : 백틱(```)3개로 묶음\n\n### 실행가능한 코드청크\n백틱 뒤에 `{python}`붙여주면 됨\n\n::: {#0af1dea6 .cell execution_count=1}\n``` {.python .cell-code}\n1%1\n```\n\n::: {.cell-output .cell-output-display execution_count=1}\n```\n0\n```\n:::\n:::\n\n\n##'코드 청크 실행 옵션\n\n옵션은 `#|` 시작함.\n*`echo` 옵션: 코드를 문서에 보여줌\n*`eval` 옵션: 코드를 돌릴 것인가, 그냥 둘것인가를 결정\n\n::: {#173b622d .cell execution_count=2}\n\n::: {.cell-output .cell-output-display execution_count=2}\n```\n0\n```\n:::\n:::\n\n\n  이것은 간단한 각주  [^1].\n  [^1]: 나\n  \n  ##취소선 ,굵게, 이택릭\n  **굵게**\n  *기울기*\n  ~~취소~~\n  ## 체크박스\n  \n  - [x] ~~화분 물 주기~~\n  - [ ] 밀린 일기 작성\n  \n  ## 이미지 넣는법\n[슬기로운 통계생활](https://statisticsplaybook.com/)\n![위키피디아 흑요석](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/ObsidianOregon.jpg/360px-ObsidianOregon.jpg)\n![저장된 사진](C:\\Users\\USER\\Desktop\\이재준\\주석 2024-07-11 114552)\n\n## 수식 입력 방버\n* 인라인 수식: $ 하나로 감싸준다. (본문에 입력)\n* 디스플레이 수식: $ 두개로 감싸준다.(독립적인 문단)\n\n문장안에 숫자 $5^2$를 넣어보자\n여러숫자들을 따로 떼어 표시하자\n\n$$\nx^2+ y^2 = 5\n\\angle 4\n$$\n\n# 마크다운 1\n## 굵게\n**랜더링 해줘~**\n__제발__\n\n### 기울림 이탤릭\n\n*이탤릭*\n_기울림_\n\n#### 취소선\n~~제발 되게해줘~~\n\n1. 순서가있는 리스트\n\n2. 순서가 없는 리스트\n\n- 되고\n- 안되고\n\n[github](naver.com) \n\n![야구](https://search.naver.com/search.naver?ssc=tab.image.all&where=image&sm=tab_jum&query=%EC%95%BC%EA%B5%AC#imgId=image_sas%3Ablog_58387660d4451e66dff75228e9c94c8f)\n\n>Anyone can learn anything\n\\-야야\n\n---\n\n::: {#8be28fa5 .cell execution_count=3}\n``` {.python .cell-code}\n1%1\n```\n\n::: {.cell-output .cell-output-display execution_count=3}\n```\n0\n```\n:::\n:::\n\n\n각주[^1] 이다\n\n\n각주[^가나다]\n\n",
+    "supporting": [
+      "markdown_files\\figure-html"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
