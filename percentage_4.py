@@ -1,3 +1,4 @@
+# norm 정규분포함수 다양한 값 기능 신뢰구간 분산 구하기 t분포도 마찬가지로 하고 각조건에 따른 맞는 신뢰구간 구하기
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt    
