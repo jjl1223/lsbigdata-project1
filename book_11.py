@@ -29,8 +29,8 @@ geo["features"][0]["geometry"]
 geo["features"][0]["geometry"]["coordinates"]
 
 coordinates_list=geo["features"][5]["geometry"]["coordinates"]
-
-
+#폰트 맑은 고딕으로 바꾸기
+plt.rcParams.update({"font.family": "Malgun Gothic"})
 #이렇게 하면 대괄호가 하나씩 없어진다
 len(coordinates_list[0])
 len(coordinates_list[0][0])
@@ -46,6 +46,7 @@ plt.show()
 plt.clf()
 
 np.arange(0,25)
+
 ---------------------------------------------------------------------------------
 #조별 코드
 #1번 데이터프레임 만들기 데이터 프레임만 된다
@@ -129,7 +130,7 @@ for i in range(25):
 
 result
 #서울 지도 그리기
-result.plot(kind="scatter",x="x",y="y",style="o",s=1,pallete="")
+result.plot(kind="scatter",x="x",y="y",style="o",s=1)
 plt.show()
 plt.clf()
 
@@ -171,19 +172,47 @@ df_seoulpop.info()
 
 #!pip install folium
 #지도는 구글지도나 OpenStreetMap 활용 folium는 OpenStreetMap 씀
+#304
 import folium
 center_x=result["x"].mean()
 center_y=result["y"].mean()
+#location에 center값 안들어가서 상수 넣음 np안들어가는듯
+#location값 x,y반대로 넣어주기
 my_map=folium.Map(location=[37.55,126.97],zoom_start=7,tiles="cartodbpositron")
-
 my_map.save("map_seoul.html")
 
+map_sig=folium.Map(location=[37.55,126.97],zoom_start=7,tiles="cartodbpositron")
+
 #코로플릿
+geo_seoul["features"][0]["properties"]["SIG_CD"]
 folium.Choropleth(
     geo_data=geo_seoul,
     data=df_seoulpop,
-    columns=("code","pop")
+    columns=("code","pop"),
+    key_on="feature.properties.SIG_CD").add_to(map_sig)
+    map_sig.save("map_seoul.html")
     
-    
-)
+geo_seoul["features"][0]["properties"]["SIG_CD"]
 
+#교재 306P
+bins =list(df_seoulpop["pop"].quantile([0,0.2,0.4,0.6,0.8,1]))
+bins
+
+folium.Choropleth(
+    geo_data=geo_seoul,
+    data=df_seoulpop,
+    columns=("code","pop"),
+    fill_color="viridis",
+    key_on="feature.properties.SIG_CD").add_to(map_sig)
+    
+    
+    
+    map_sig.save("map_seoul1.html")
+    
+#점찍는법 한번에 하나만 찍을수있고 여러개찍을거면 저 함수를 반복해서 찍어야된다
+make_seouldf(1)
+make_seouldf(0).iloc[:,1:3].mean()
+folium.Marker([37.583744, 126.983800], popup="종로구").add_to(map_sig)
+
+
+map_sig.save("map_seoul1.html")
