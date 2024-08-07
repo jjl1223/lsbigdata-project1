@@ -1,0 +1,2 @@
+git reset HEAD~
+터미널에 박은후에 ignore파일에 대용량 파일넣고 다시 commit하기

@@ -1,3 +1,4 @@
+# 표본평균에 따른 랜덤값 뽑기 + 신뢰구간 +표본분산 함수로 구해보기
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt

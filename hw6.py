@@ -1,3 +1,4 @@
+#각 성별데이터 평균 그래프를 그리고 각 성별에 맞는 신뢰구간 그리기
 import pandas as pd
 import numpy as np
 import seaborn as sns
