@@ -12,9 +12,16 @@
         "\n",
         "\n",
         "\n",
+<<<<<<< HEAD
         "## seaborn 패키지 불러오기\n"
       ],
       "id": "81bf2b2e"
+=======
+        "\n",
+        "## seaborn 패키지 불러오기\n"
+      ],
+      "id": "6de14a16"
+>>>>>>> 4032bc0039b04320cb882c75c3e94f67ba1ec4b3
     },
     {
       "cell_type": "code",
@@ -25,7 +32,11 @@
         "import plotly.express as px\n",
         "mpg=pd.read_csv(\"data/mpg.csv\")\n"
       ],
+<<<<<<< HEAD
       "id": "0d29751d",
+=======
+      "id": "a0cb2537",
+>>>>>>> 4032bc0039b04320cb882c75c3e94f67ba1ec4b3
       "execution_count": null,
       "outputs": []
     },
@@ -35,7 +46,11 @@
       "source": [
         "##scater plot 사용\n"
       ],
+<<<<<<< HEAD
       "id": "3e1d62c8"
+=======
+      "id": "3c15f095"
+>>>>>>> 4032bc0039b04320cb882c75c3e94f67ba1ec4b3
     },
     {
       "cell_type": "code",
@@ -43,7 +58,11 @@
       "source": [
         "sns.scatterplot(data=mpg,x=\"displ\",y=\"hwy\").set(xlim=[3,6],ylim=[10,30])"
       ],
+<<<<<<< HEAD
       "id": "ec07c07b",
+=======
+      "id": "7801711a",
+>>>>>>> 4032bc0039b04320cb882c75c3e94f67ba1ec4b3
       "execution_count": null,
       "outputs": []
     },
@@ -54,7 +73,11 @@
         "## barplot() 사용하기\n",
         "#데이터 전처리하기\n"
       ],
+<<<<<<< HEAD
       "id": "0e4eb331"
+=======
+      "id": "87f36a42"
+>>>>>>> 4032bc0039b04320cb882c75c3e94f67ba1ec4b3
     },
     {
       "cell_type": "code",
@@ -65,7 +88,11 @@
         "            \n",
         "df_mpg"
       ],
+<<<<<<< HEAD
       "id": "ac7d46c4",
+=======
+      "id": "0a952202",
+>>>>>>> 4032bc0039b04320cb882c75c3e94f67ba1ec4b3
       "execution_count": null,
       "outputs": []
     },
@@ -75,7 +102,11 @@
       "source": [
         "#barplot 사용해서 그래프 그리기\n"
       ],
+<<<<<<< HEAD
       "id": "55d2c464"
+=======
+      "id": "8ff36536"
+>>>>>>> 4032bc0039b04320cb882c75c3e94f67ba1ec4b3
     },
     {
       "cell_type": "code",
@@ -83,7 +114,11 @@
       "source": [
         "sns.barplot(data=df_mpg.sort_values(\"mean_hwy\"), x=\"drv\",y=\"mean_hwy\",hue=\"drv\" )   "
       ],
+<<<<<<< HEAD
       "id": "418d4985",
+=======
+      "id": "a9f60bf3",
+>>>>>>> 4032bc0039b04320cb882c75c3e94f67ba1ec4b3
       "execution_count": null,
       "outputs": []
     },
@@ -93,7 +128,11 @@
       "source": [
         "##count plot 사용하기\n"
       ],
+<<<<<<< HEAD
       "id": "958ab1cb"
+=======
+      "id": "5349e44c"
+>>>>>>> 4032bc0039b04320cb882c75c3e94f67ba1ec4b3
     },
     {
       "cell_type": "code",
@@ -101,7 +140,11 @@
       "source": [
         "sns.countplot(data=mpg,x='drv')"
       ],
+<<<<<<< HEAD
       "id": "4233f796",
+=======
+      "id": "392d3c15",
+>>>>>>> 4032bc0039b04320cb882c75c3e94f67ba1ec4b3
       "execution_count": null,
       "outputs": []
     },
@@ -111,7 +154,11 @@
       "source": [
         "px.scatter(data_frame = mpg, x= 'cty',y='hwy',color='drv')"
       ],
+<<<<<<< HEAD
       "id": "7f66a1ec",
+=======
+      "id": "71f4f8ec",
+>>>>>>> 4032bc0039b04320cb882c75c3e94f67ba1ec4b3
       "execution_count": null,
       "outputs": []
     }
@@ -121,7 +168,11 @@
       "name": "python3",
       "language": "python",
       "display_name": "Python 3 (ipykernel)",
+<<<<<<< HEAD
       "path": "C:\\DS\\Python\\Python312\\share\\jupyter\\kernels\\python3"
+=======
+      "path": "C:\\DS\\Python\\Python3.12.4\\share\\jupyter\\kernels\\python3"
+>>>>>>> 4032bc0039b04320cb882c75c3e94f67ba1ec4b3
     }
   },
   "nbformat": 4,
