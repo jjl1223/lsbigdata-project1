@@ -11,6 +11,7 @@
   "test1.qmd": {
     "test1.html": "8de20642"
   },
+<<<<<<< HEAD
   "dashboard.qmd": {
     "dashboard.html": "5a766393"
   },
@@ -22,5 +23,9 @@
   },
   "lecture8.ipynb": {
     "lecture8.html": "b03c30a6"
+=======
+  "dashboard1.qmd": {
+    "dashboard1.html": "8adf2207"
+>>>>>>> 4032bc0039b04320cb882c75c3e94f67ba1ec4b3
   }
 }
