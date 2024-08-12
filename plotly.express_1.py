@@ -82,7 +82,7 @@ fig.add_trace(
 fig.show()
 
 # 범주형 변수로 회귀분석 진행하기
-# 범주형 변수인 'species'를 더미 변수로 변환(T,F로 변환) 즉 문자열을 숫자로 변환가능
+# 범주형 변수인 'species'를 더미 변수로 변환(T,F로 변환) 즉 문자열을 숫자로 변환가능(True=1False=0)
 penguins_dummies = pd.get_dummies(penguins, columns=['species'], drop_first=True)
 
 #첫번째행을 버려도 되는 이유는 FF일때 당연히 첫번째꺼이길것이기 때문에 데이터양을 줄이기 위해서 버린다

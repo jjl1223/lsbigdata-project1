@@ -1,0 +1,129 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"교재 챕터8\"\n",
+        "jupyter: python3\n",
+        "---\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "## seaborn 패키지 불러오기\n"
+      ],
+      "id": "81bf2b2e"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import seaborn as sns\n",
+        "import matplotlib.pyplot as plt\n",
+        "import plotly.express as px\n",
+        "mpg=pd.read_csv(\"data/mpg.csv\")\n"
+      ],
+      "id": "0d29751d",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "##scater plot 사용\n"
+      ],
+      "id": "3e1d62c8"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "sns.scatterplot(data=mpg,x=\"displ\",y=\"hwy\").set(xlim=[3,6],ylim=[10,30])"
+      ],
+      "id": "ec07c07b",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## barplot() 사용하기\n",
+        "#데이터 전처리하기\n"
+      ],
+      "id": "0e4eb331"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "df_mpg= mpg.groupby(\"drv\",as_index=False) \\\n",
+        "            .agg(mean_hwy=(\"hwy\",\"mean\"))\n",
+        "            \n",
+        "df_mpg"
+      ],
+      "id": "ac7d46c4",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "#barplot 사용해서 그래프 그리기\n"
+      ],
+      "id": "55d2c464"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "sns.barplot(data=df_mpg.sort_values(\"mean_hwy\"), x=\"drv\",y=\"mean_hwy\",hue=\"drv\" )   "
+      ],
+      "id": "418d4985",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "##count plot 사용하기\n"
+      ],
+      "id": "958ab1cb"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "sns.countplot(data=mpg,x='drv')"
+      ],
+      "id": "4233f796",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "px.scatter(data_frame = mpg, x= 'cty',y='hwy',color='drv')"
+      ],
+      "id": "7f66a1ec",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "C:\\DS\\Python\\Python312\\share\\jupyter\\kernels\\python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

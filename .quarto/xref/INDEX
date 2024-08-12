@@ -10,5 +10,17 @@
   },
   "test1.qmd": {
     "test1.html": "8de20642"
+  },
+  "dashboard.qmd": {
+    "dashboard.html": "5a766393"
+  },
+  "code/deshboard.qmd": {
+    "deshboard.html": "a2033cc4"
+  },
+  "index.ipynb": {
+    "index.html": "eda42ff7"
+  },
+  "lecture8.ipynb": {
+    "lecture8.html": "b03c30a6"
   }
 }
