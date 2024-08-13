@@ -1,9 +1,9 @@
 ---
-title: "팔머펭귄 대쉬보드"
-author: "Issac Lee"
+title: "백룡즈 대쉬보드"
+author: "00즈
 format: 
   dashboard:
-    logo: "penguins-cover.png"
+    logo: "dragon.png"
     nav-buttons:
       - icon: github
         href: https://github.com/issactoast/lsbigdata-project1/
