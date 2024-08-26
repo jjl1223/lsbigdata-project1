@@ -1,0 +1,313 @@
+---
+title: "백룡즈 대쉬보드"
+author: "00즈"
+format: 
+  dashboard:
+    logo: "dragon.png"
+    scrolling: true
+    nav-buttons:
+      - icon: github
+        href: https://github.com/issactoast/lsbigdata-project1/
+---
+
+# {.toolbar}
+
+여기는 사이드바에 대한 내용이 들어갈 곳입니다.
+
+# 추가 데이터 시각화
+
+
+
+### 첫번째 {height=60%}
+
+```{python}
+import pandas as pd
+import numpy as np
+
+# 데이터 불러오기, 데이터 전처리
+df = pd.read_csv("Ames population data.csv")
+df = df.iloc[5::, :2]
+
+df_age = df.iloc[0:13, :2].reset_index(drop=True)
+# object를 int로 변환
+df_age['Ames city, Iowa!!Estimate'] = df_age['Ames city, Iowa!!Estimate'].str.replace(',', '').astype(int)
+
+df_race = pd.concat([df.iloc[72:76, :2], df.iloc[77:84, :2]]).reset_index(drop=True)
+# object를 int로 변환
+df_race['Ames city, Iowa!!Estimate'] = df_race['Ames city, Iowa!!Estimate'].str.replace(',', '').astype(int)
+
+
+# 나이
+import plotly.graph_objects as go
+labels = df_age["Label (Grouping)"]
+values = df_age["Ames city, Iowa!!Estimate"]
+
+fig = go.Figure(data=[go.Pie(labels=labels, values=values, hole=0.3)])
+
+fig.update_layout(
+    title_text="Ames 나이 분포",
+    title_font_size=24,
+    title_x=0.5,
+    annotations=[dict(text='나이', x=0.5, y=0.5, font_size=20, showarrow=False)],
+    showlegend=True
+)
+
+```
+
+```{python}
+# 인종
+labels = df_race["Label (Grouping)"]
+values = df_race["Ames city, Iowa!!Estimate"]
+
+fig = go.Figure(data=[go.Pie(labels=labels, values=values, hole=0.3)])
+
+fig.update_layout(
+    title_text="에임즈 인종 분포",
+    title_font_size=24,
+    title_x=0.5,
+    title_y=0.9,
+    annotations=[dict(text='인종', x=0.5, y=0.5, font_size=20, showarrow=False)],
+    showlegend=False
+)
+
+```
+
+
+
+### 두번째 {height=40%}
+
+#### 소득 
+
+```{python}
+import plotly.express as px
+import pandas as pd
+import numpy as np
+
+income_df = pd.read_csv("Ames income.csv")
+#income_df.head()
+income_df = income_df.copy()
+
+# 소득 범위와 관련된 행 필터링
+income_brackets = [
+    'Less than $10,000',
+    '$10,000 to $14,999',
+    '$15,000 to $24,999',
+    '$25,000 to $34,999',
+    '$35,000 to $49,999',
+    '$50,000 to $74,999',
+    '$75,000 to $99,999',
+    '$100,000 to $149,999',
+    '$150,000 to $199,999',
+    '$200,000 or more'
+]
+
+# 소득 범위에 해당하는 행만 필터링
+filtered_df = income_df[income_df['Label (Grouping)'].str.strip().isin(income_brackets)].head(10)
+
+# 퍼센트 값 숫자로 변환
+filtered_df['Percent'] = filtered_df['Ames city, Iowa!!Percent'].str.replace('%', '').astype(float)
+
+# 히스토그램 생성
+fig = px.bar(filtered_df, x='Label (Grouping)', y='Percent',
+             title="Distribution of Household Income Brackets in Ames",
+             labels={'Label (Grouping)': 'Income Bracket', 'Percent': 'Percentage (%)'})
+
+#fig.update_layout(xaxis_title="Income Bracket", yaxis_title="Percentage (%)", bargap=0.2)
+fig.update_xaxes(tickangle=45, tickmode="linear")
+
+# 그래프 출력
+#fig.show()
+```
+
+
+####  교육
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt  
+# 데이터 불러오기
+df = pd.read_csv("Ames education.csv")
+df = df.rename(columns={'Ames city, Iowa!!Total!!Estimate': 'pop'})
+
+# 문자열에서 불필요한 공백 제거
+df['pop'] = df['pop'].str.strip()
+
+# 특수문자나 문자가 포함된 경우 제거할 수 있음
+df['pop'] = df['pop'].replace({'\$': '', ',': ''}, regex=True)
+
+# 문자열을 숫자형으로 변환
+df['pop'] = pd.to_numeric(df['pop'], errors='coerce')
+
+# 데이터 확인
+#print(df.head())
+
+# 특정 행과 열 선택 (2:6 행의 1열을 선택)
+pop_18_24 = df.iloc[2:6, [1]].copy()
+
+# 새로운 인덱스 설정
+new_index = ['Less_High', 'High', 'College', 'More_College']
+pop_18_24.index = new_index
+
+# 열 이름 설정 (원하는 열 이름으로 설정 가능)
+pop_18_24.columns = ['Education Level']
+
+#pop_18_24
+
+# 함수 정의: 특정 범위의 데이터를 가져오고 새로운 데이터프레임 생성
+def create_population_df(df, start_index, end_index, index_labels):
+    # 특정 행과 열 선택
+    pop_data = df.iloc[start_index:end_index, [1]].copy()
+
+    # 필요한 값 추출
+    less_value = pop_data.loc[start_index, 'pop'] - pop_data.loc[end_index - 1, 'pop']
+    more_value = pop_data.loc[end_index - 1, 'pop']
+
+    # 새로운 데이터프레임 생성
+    new_data = {
+        'Education Level': [less_value, more_value],
+    }
+
+    # 데이터프레임 생성
+    return pd.DataFrame(new_data, index=index_labels)
+
+# 각 범위와 인덱스 레이블에 대한 데이터프레임 생성
+pop_25_34 = create_population_df(df, 16, 19, ['Less_College', 'More_College'])
+pop_35_44 = create_population_df(df, 19, 22, ['Less_College', 'More_College'])
+pop_45_64 = create_population_df(df, 22, 25, ['Less_College', 'More_College'])
+pop_65_over = create_population_df(df, 25, 28, ['Less_College', 'More_College'])
+
+# 결과 출력
+# print("\npop_18_24:")
+# print(pop_18_24)
+# print("\npop_25_34:")
+# print(pop_25_34)
+# print("\npop_35_44:")
+# print(pop_35_44)
+# print("\npop_45_64:")
+# print(pop_45_64)
+# print("\npop_65_over:")
+# print(pop_65_over)
+
+#########################################################################
+# 시각화 #
+
+
+# 18-24세 데이터 시각화
+pop_18_24.plot(kind='bar', color='skyblue', legend=False)
+plt.title('Education Level of Population Aged 18-24')
+plt.ylabel('Population')
+plt.xticks(rotation=45)
+plt.show()
+
+# 25세 이상 데이터 시각화
+
+age_groups = ['25-34', '35-44', '45-64', '65+']
+less_college_values = [pop_25_34.loc['Less_College', 'Education Level'], 
+                       pop_35_44.loc['Less_College', 'Education Level'], 
+                       pop_45_64.loc['Less_College', 'Education Level'], 
+                       pop_65_over.loc['Less_College', 'Education Level']]
+more_college_values = [pop_25_34.loc['More_College', 'Education Level'], 
+                       pop_35_44.loc['More_College', 'Education Level'], 
+                       pop_45_64.loc['More_College', 'Education Level'], 
+                       pop_65_over.loc['More_College', 'Education Level']]
+
+# 막대 그래프의 폭과 위치 설정
+bar_width = 0.35
+index = np.arange(len(age_groups))
+
+# 그래프 그리기
+fig, ax = plt.subplots(figsize=(10, 6))
+
+# Less College와 More College 데이터를 병렬 막대로 표시
+bars1 = ax.bar(index, less_college_values, bar_width, label='Less College', color='lightblue')
+bars2 = ax.bar(index + bar_width, more_college_values, bar_width, label='More College', color='lightcoral')
+
+# 그래프 제목과 라벨 설정
+ax.set_xlabel('Age Groups')
+ax.set_ylabel('Population')
+ax.set_title('Comparison of Education Levels by Age Group')
+ax.set_xticks(index + bar_width / 2)
+ax.set_xticklabels(age_groups)
+ax.legend()
+
+# 막대 그래프 위에 값 표시
+def add_labels(bars):
+    for bar in bars:
+        yval = bar.get_height()
+        ax.text(bar.get_x() + bar.get_width() / 2, yval, int(yval), ha='center', va='bottom')
+
+add_labels(bars1)
+add_labels(bars2)
+
+# 그래프 스타일링
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.yaxis.grid(True, linestyle='--', alpha=0.7)
+
+plt.tight_layout()
+plt.show()
+```
+
+
+
+# 지도데이터 시각화
+
+```{python}
+articles = 100
+comments = 50
+spam_num = 300
+```
+
+## Row 
+
+```{python}
+#| content: valuebox
+#| title: "Articles per day"
+#| icon: pencil
+#| color: primary
+dict(
+  value = articles
+)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Comments per day"
+dict(
+  icon = "chat",
+  color = "primary",
+  value = comments
+)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Spam per day"
+dict(
+  icon = "airplane-engines",
+  color = "#f0330b",
+  value = spam_num
+)
+```
+
+## Row  
+
+```{python}
+import pandas as pd
+import numpy as np
+import plotly.express as px
+from palmerpenguins import load_penguins
+
+penguins = load_penguins()
+# penguins.head()
+
+fig = px.scatter(
+    penguins,
+    x="bill_length_mm",
+    y="bill_depth_mm",
+    color="species",
+    # trendline="ols" # p.134
+)
+fig.show()
+
+

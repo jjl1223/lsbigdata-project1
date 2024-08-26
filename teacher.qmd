@@ -1,6 +1,6 @@
 ---
 title: "백룡즈 대쉬보드"
-author: "00즈
+author: "00즈"
 format: 
   dashboard:
     logo: "dragon.png"
@@ -13,9 +13,9 @@ format:
 
 여기는 사이드바에 대한 내용이 들어갈 곳입니다.
 
-# Page 1
+# 추가 데이터 시각화
 
-## 칼럼
+
 
 ### 첫번째 {height=60%}
 
@@ -37,7 +37,10 @@ fig = px.scatter(
 )
 fig.show()
 ```
+```{python}
+#| content: card-toolbar
 
+```
 ### 두번째 {height=40%}
 
 #### 테스트1 {.tabset}
@@ -52,11 +55,11 @@ show(penguins, buttons = ['copy', 'excel', 'pdf'])
 
 카드안에 들어있는 텍스트 입니다.
 
-![팔머펭귄](penguins-cover.png)
+![팔머펭귄](dragon.png)
 
 :::
 
-# Page 2
+# 지도데이터 시각화
 
 ```{python}
 articles = 100
