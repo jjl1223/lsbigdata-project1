@@ -94,7 +94,7 @@ b=np.array([1,2,3,
             2,4,5,
             3,6,7]).reshape(3,3)
 
-b_inv=np.linalg.inv(b) # 에러남
+#b_inv=np.linalg.inv(b) # 에러남 왜 역행렬을 구할 수 가 없어서
 
 np.linalg.det(b) #행렬식이 항상 0
 
@@ -149,7 +149,7 @@ def line_perform_lasso(beta):
    beta=np.array(beta).reshape(3,1)
    a=(y-matX @ beta)
    return (a.transpose() @ a) +30*np.abs(beta[1:]).sum()
-# 30이 람다이다
+# 30이 람다이다(모델에서는 alpha)
 line_perform_lasso([8.55, 5.96,-4.38])
 line_perform_lasso([8.14,0.96,0])
 # 초기 추정값

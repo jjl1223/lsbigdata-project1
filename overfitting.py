@@ -201,6 +201,8 @@ reg_line = model.predict(df_k)
 plt.plot(k,reg_line,color="red")
 plt.scatter(train_df["x"],train_df["y"],color="blue")
 
+
+
 # 9차 모델성능확인 다른방법
 test_df["x2"] = test_df["x"]**2
 test_df["x3"] = test_df["x"]**3
@@ -285,5 +287,6 @@ x = test_df[["x"] + [f"x{i}" for i in range(2, 21)]] #리스트 컴프리헨션
 
 y_hat = model.predict(x)
 
-# 모델 성능
+# 모델 성능zz
 sum((test_df["y"] - y_hat)**2)
+

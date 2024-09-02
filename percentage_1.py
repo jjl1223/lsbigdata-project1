@@ -76,7 +76,7 @@ bernoulli.pmf(1, 0.3)
 bernoulli.pmf(0, 0.3)
 
 # 이항분포 x~p (x=k | n,p)
-#n: 베르누이 확률변수
+#n: 베르누이 확률변수 실행 횟수
 #p: 1이 나올 확률
 # binom.pmf(k,n,p)
 

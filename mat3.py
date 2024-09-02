@@ -19,7 +19,7 @@ for i in range(2, 21):
     df[f"x{i}"] = df["x"] ** i
 
 df
-
+fold_num=0
 def make_tr_val(fold_num, df):
     np.random.seed(2024)
     myindex=np.random.choice(30, 30, replace=False)
@@ -76,7 +76,8 @@ df = pd.DataFrame({
     'tr': tr_result_total.mean(axis=0),
     'val': val_result_total.mean(axis=0)
 })
-
+val_result_total.shape
+val_result_total.mean(axis=0).shape
 df['tr']
 
 # seaborn을 사용하여 산점도 그리기
@@ -85,5 +86,5 @@ sns.scatterplot(data=df, x='lambda', y='val', color='red')
 plt.xlim(0, 10)
 
 # alpha를 2.67로 선택!
-np.argmin(val_result_total.mean(axis=0))
+np.argmin(val_result_total.mean(axis=0)) # argmin 최소값의 주소자리
 np.arange(0, 10, 0.01)[np.argmin(val_result_total.mean(axis=0))]
