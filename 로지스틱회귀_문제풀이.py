@@ -104,4 +104,11 @@ y=admission_data["REMISS"]
 x=admission_data.drop("REMISS", axis=1)
 y_hat = model.predict(x)
 
-y_hat / (y_hat+1)
+a=y_hat / (y_hat+1)
+y
+for i in np.arange(0,27,1):
+    if a[i]>0.5:
+        a=1
+    else:
+        a=0
+a    
